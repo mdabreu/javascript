@@ -1,9 +1,7 @@
 /* INSTRUCTIONS
 To run this file, click in the Console below and type: node 3_deck.js 
 If the console isn't visible, click the View menu above and choose Show Console.
-
 You can clear the console by typing `clear` and pressing enter.
-
 If your program is stuck in an infinite loop, you can break out of the program by typing ctrl + C.
 */
 
@@ -48,12 +46,25 @@ function createDeck() {
 
 myDeck = createDeck()
 
+
+
 /* 7. Use a for loop to loop through the deck and list each card in the order the appear in the newly shuffled array. Use the log() method to print out a message like this, once for each card:
 "7 of ♥.︎"
 */
 
+// myDeck.forEach(card => {console.log(card[1] + " of " + card[0])})
 
-myDeck.forEach(card => {console.log(card[1] + " of " + card[0])})
+// create a 7 card hand 
+function createHand() {
+    hand = [];
+        do {
+            hand.push(myDeck[0])
+            myDeck.shift()
+        }
+    while (hand.length < 7 ) ;
+    return hand
+}
+        
+myHand = createHand();
+console.log(myHand)
 
-
-// Run your code by typing node 3_deck.js in the console below
