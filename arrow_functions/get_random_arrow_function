@@ -18,5 +18,7 @@ const randomnumberbetweenvalues = (lower, upper) => {
 //or 
 
 const randomnumberbetweenvalues = (lower, upper) => {
-    return Math.floor(Math.random() * (upper - lower + 1)) + lower;;
+    if (isNaN(lower) || isNaN(upper)) {
+        throw Error('please submit a number'); }
+    return Math.floor(Math.random() * (upper - lower + 1)) + lower;}
 }
