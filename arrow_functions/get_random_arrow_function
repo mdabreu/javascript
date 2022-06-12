@@ -1,0 +1,22 @@
+/**
+ * Returns a random number between two numbers.
+ *
+ * @param {number} lower - The lowest number value.
+ * @param {number} upper - The highest number value.
+ * @return {number} The random number value.
+ */
+
+Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+
+// Call the function and pass it different values
+
+const randomnumberbetweenvalues = (lower, upper) => {
+    let number = Math.floor(Math.random() * (upper - lower + 1)) + lower;;
+    return number
+}
+    
+//or 
+
+const randomnumberbetweenvalues = (lower, upper) => {
+    return Math.floor(Math.random() * (upper - lower + 1)) + lower;;
+}
