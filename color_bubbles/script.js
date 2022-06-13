@@ -23,7 +23,7 @@ for (let i = 0; i < 11; i++ ) {
 document.querySelector('main').innerHTML = html;
 
 
-// or 
+// or (additionally you could remove the red, green, blue random num generator and replace that w/ a function 
 
 for (let i = 0; i < 11; i++ ) {
     red = Math.floor(Math.random() * 256);
